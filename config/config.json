@@ -1,11 +1,11 @@
 {
   "development": {
-    "database": "express_authentication_development",
+    "database": "barricade",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "express_authentication_test",
+    "database": "barricade_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -20,3 +20,5 @@
     }
   }
 }
+
+npx sequelize model:create --name  --attributes author:string,content:text,favoriteId:integer
