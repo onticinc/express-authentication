@@ -21,4 +21,3 @@
   }
 }
 
-npx sequelize model:create --name  --attributes author:string,content:text,favoriteId:integer

@@ -1,32 +1,29 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('games', {
+    await queryInterface.createTable('MenuItems', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      gameName: {
+      menuItemName: {
         type: Sequelize.STRING
       },
-      gameModule: {
-        type: Sequelize.STRING
-      },
-      gameManufacture: {
-        type: Sequelize.STRING
-      },
-      gameSerialNumber: {
-        type: Sequelize.STRING
-      },
-      gameNotes: {
+      menuItemDescription: {
         type: Sequelize.TEXT
       },
-      gamePicture: {
+      menuItemPicture: {
         type: Sequelize.STRING
       },
-      gameHighScore: {
+      menuItemPrice: {
+        type: Sequelize.INTEGER
+      },
+      menuItemPicture: {
+        type: Sequelize.STRING
+      },
+      menuItemType: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -40,6 +37,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('games');
+    await queryInterface.dropTable('MenuItems');
   }
 };
